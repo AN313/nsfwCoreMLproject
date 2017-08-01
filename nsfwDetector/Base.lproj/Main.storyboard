@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,69 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="nsfwDetector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ve-nF-ChC">
+                                <rect key="frame" x="0.0" y="40" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="375" id="EKA-Da-OfA"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KuE-st-48G">
+                                <rect key="frame" x="0.0" y="425" width="375" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1Y-7x-vL8" userLabel="Waiting">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="AYg-OM-M5e"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drr-pG-nZF">
+                                        <rect key="frame" x="0.0" y="45" width="375" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="qR9-1N-wMB"/>
+                                        </constraints>
+                                        <state key="normal" title="Choose a photo"/>
+                                        <connections>
+                                            <action selector="pickImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tdx-eo-Mnx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="drr-pG-nZF" secondAttribute="trailing" id="2tZ-RO-dSK"/>
+                                    <constraint firstItem="Y1Y-7x-vL8" firstAttribute="leading" secondItem="KuE-st-48G" secondAttribute="leading" id="5be-xv-O22"/>
+                                    <constraint firstAttribute="bottom" secondItem="drr-pG-nZF" secondAttribute="bottom" id="OZH-LK-XD1"/>
+                                    <constraint firstItem="Y1Y-7x-vL8" firstAttribute="top" secondItem="KuE-st-48G" secondAttribute="top" id="ng3-0v-jcH"/>
+                                    <constraint firstItem="drr-pG-nZF" firstAttribute="leading" secondItem="KuE-st-48G" secondAttribute="leading" id="opm-Eq-qGa"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y1Y-7x-vL8" secondAttribute="trailing" id="t66-Qm-sbe"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8ve-nF-ChC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2dv-Ur-d45"/>
+                            <constraint firstItem="KuE-st-48G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GSc-jz-Jhb"/>
+                            <constraint firstItem="8ve-nF-ChC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="Mgp-d7-yb9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KuE-st-48G" secondAttribute="trailing" id="Q0d-8A-wuC"/>
+                            <constraint firstItem="KuE-st-48G" firstAttribute="top" secondItem="8ve-nF-ChC" secondAttribute="bottom" constant="10" id="iqL-uX-KaX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8ve-nF-ChC" secondAttribute="trailing" id="wqY-zc-xwh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="Y1Y-7x-vL8" id="fwv-zL-wDg"/>
+                        <outlet property="photo" destination="8ve-nF-ChC" id="37P-eM-qrK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>

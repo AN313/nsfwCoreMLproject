@@ -22,6 +22,7 @@
 		DB51A3D31F30317000F10581 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB51A3D61F30317000F10581 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB51A3D81F30317000F10581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBADA3591F30FEFE00C9D77D /* nsfw.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = nsfw.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 				DB51A3CE1F30317000F10581 /* ViewController.swift */,
 				DB51A3D01F30317000F10581 /* Main.storyboard */,
 				DB51A3D31F30317000F10581 /* Assets.xcassets */,
+				DBADA3591F30FEFE00C9D77D /* nsfw.mlmodel */,
 				DB51A3D51F30317000F10581 /* LaunchScreen.storyboard */,
 				DB51A3D81F30317000F10581 /* Info.plist */,
 			);
@@ -273,6 +275,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = nsfwDetector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = abc.nsfwDetector;
@@ -286,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = nsfwDetector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = abc.nsfwDetector;
@@ -314,6 +318,7 @@
 				DB51A3DD1F30317000F10581 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
